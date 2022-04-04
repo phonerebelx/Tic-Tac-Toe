@@ -94,9 +94,8 @@ def getPlayerMove(board):
             j = 1
             while j < 10:
                 copy = getBoardCopy(board)
-                
-                if j == len(board):
-                    break
+
+
                 if isSpaceFree(copy, j):
                     makeMove(copy, computerLetter, j)
                     if isWinner(copy, computerLetter):
@@ -106,14 +105,12 @@ def getPlayerMove(board):
             j = 1
             while j < 10:
                 copy = getBoardCopy(board)
-                
-                if j == len(board):
-                    break
                 if isSpaceFree(copy, j):
                     makeMove(copy, playerLetter, j)
                     if isWinner(copy, playerLetter):
                         return j
                 j += 1
+
 
 
 
@@ -184,6 +181,12 @@ while True:
     # Reset the board
     # theBoard = [' '] * 10
     theBoard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+
+
+
+
+
     playerLetter, computerLetter = inputPlayerLetter()
     turn = whoGoesFirst()
     print('The ' + turn + ' will go first.')
