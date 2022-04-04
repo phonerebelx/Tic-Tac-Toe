@@ -94,26 +94,26 @@ def getPlayerMove(board):
             j = 1
             while j < 10:
                 copy = getBoardCopy(board)
-                j += 1
+                
                 if j == len(board):
                     break
                 if isSpaceFree(copy, j):
                     makeMove(copy, computerLetter, j)
                     if isWinner(copy, computerLetter):
                         return j
-
+                j += 1
         if playerLetter == board[i]:
             j = 1
             while j < 10:
                 copy = getBoardCopy(board)
-                j += 1
+                
                 if j == len(board):
                     break
                 if isSpaceFree(copy, j):
                     makeMove(copy, playerLetter, j)
                     if isWinner(copy, playerLetter):
                         return j
-
+                j += 1
 
 
 
